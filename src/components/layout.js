@@ -10,7 +10,10 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import vars from "./layout.scss"
+
+console.log('vars = ', vars);
+console.log('vars.violet = ', vars.violet);
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -32,6 +35,7 @@ const Layout = ({ children }) => (
             maxWidth: 960,
             padding: `0px 1.0875rem 1.45rem`,
             paddingTop: 0,
+            background: vars.violet,
           }}
         >
           <main>{children}</main>
